@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Portfolio Website</title>
+    <link rel="stylesheet" href="ind.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        #menu-icon0 {
+    font-size: 3rem; /* Increase the size as needed */
+    cursor: pointer; /* Optional: make the icon clickable */
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src="last1.png" alt="Santosh Totad Logo" class="logo-img">
+        </a>
+        
+        <!-- Menu Icon (for mobile view) -->
+        <i class='bx bx-menu' id="menu-icon0"></i>
+
+        <nav class="navbar">
+            <a href="#home" style="color: black;">Home</a>
+            <a href="#about" style="color: black;">About</a>
+            <a href="#skills" style="color: black;">Skills</a>
+            <a href="#services" style="color: black;">Services</a>
+            <a href="#certifications" style="color: black;">Certification</a>
+            <a href="#projects" style="color: black;">Project</a>
+            <a href="#contact" style="color: black;">Contact</a>
+        </nav>
+
+        <!-- Day/Night Toggle Button -->
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-switcher">
+            <label for="theme-switcher" class="toggle-label">
+                <i class="bx bx-sun"></i>
+                <i class="bx bx-moon"></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Santosh</span></h1>
+            <h3 class="text-animation">I'm a <span></span></h3>
+            <p><strong>I'm a skilled Full Stack Developer</strong> with expertise in both <strong>front-end and back-end technologies</strong>. I'm passionate about building <strong>scalable and efficient web applications</strong> that deliver seamless user experiences.</p>
+
+            <div class="social-icons">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="SantoshTotad_InternshalaResume (2).pdf" class="btn">DOWNLOAD CV</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+ 
+            <div class="home-img">
+                <img src="last.jpg" alt="image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="l2.jpg" alt="Santosh N Totad">
+                </div>
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>Hello! I'm <strong>Santosh N Totad</strong>, a Computer Science engineering student at Sampoorna Group of Institutions under VTU University. I have a strong foundation in programming languages and am passionate about exploring the latest advancements in artificial intelligence. My interests in AI have led me to work with powerful tools like ChatGPT and Blackbox AI, which I use to solve complex problems and enhance productivity.</p>
+
+                    <!-- Read more button -->
+                    <button class="read-more-btn" id="read-more-btn">Read More</button>
+
+                    <!-- Additional content to show when Read More is clicked -->
+                    <div class="additional-content" id="additional-content">
+                        <p>I am skilled in various technologies such as frontend (React, Vue.js), backend (Node.js, Express), and databases (MySQL, MongoDB). I also have a strong understanding of machine learning frameworks and mobile app development, which I use to build solutions that integrate modern web and AI techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2> My Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="circle" data-progress="90"></div>
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill">
+                    <div class="circle" data-progress="80"></div>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill">
+                    <div class="circle" data-progress="70"></div>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill">
+                    <div class="circle" data-progress="85"></div>
+                    <h3>React</h3>
+                </div>
+                <div class="skill">
+                    <div class="circle" data-progress="75"></div>
+                    <h3>Node.js</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2>Relevant Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-card">
+                    <h3>Certification 1</h3>
+                    <p>This certification covers fundamental skills in html5.</p>
+                    <a href="1-059b52dd-12d7-4e84-b681-e0c08f1bf43f (1).pdf" class="certificate-btn">View Certificate</a>
+                </div>
+                <div class="certification-card">
+                    <h3>Certification 2</h3>
+                    <p>This certification focuses on advanced CSS .</p>
+                    <a href="1-117abe7b-89a4-4620-8bd0-82e12423b587 (1).pdf"  class="certificate-btn">View Certificate</a>
+                </div>
+                <div class="certification-card">
+                    <h3>Certification 3</h3>
+                    <p>This certification is about JavaScript</p>
+                    <a href="1-c88648f0-eea7-413f-ad29-b3021796bf46.pdf"  class="certificate-btn">View Certificate</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+<section id="projects" class="project-section">
+    <h2 class="section-heading" style="color: green;">Projects</h2>
+    <div class="project-container">
+      <div class="project-card">
+        <h3 class="project-title">Project 1</h3>
+        <p class="project-description">Brief description of Project 1.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 2</h3>
+        <p class="project-description">Brief description of Project 2.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 3</h3>
+        <p class="project-description">Brief description of Project 3.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 4</h3>
+        <p class="project-description">Brief description of Project 4.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 5</h3>
+        <p class="project-description">Brief description of Project 5.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 6</h3>
+        <p class="project-description">Brief description of Project 6.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3 class="project-title">Project 7</h3>
+        <p class="project-description">Brief description of Project 7.</p>
+        <a href="#" class="project-link">View Project</a>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+<section id="services" class="services-section">
+    <h2 class="section-heading"  style="color:green;">Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="service-title">Front-End Development</h3>
+        <p class="service-description">
+          We build responsive, visually appealing websites that offer a seamless user experience.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-server"></i>
+        </div>
+        <h3 class="service-title">Back-End Development</h3>
+        <p class="service-description">
+          We ensure your websites are powered by robust, scalable back-end systems to handle all the data.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="service-title">Full Stack Development</h3>
+        <p class="service-description">
+          Offering both front-end and back-end development to provide comprehensive web applications.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-bug"></i>
+        </div>
+        <h3 class="service-title">Software Testing</h3>
+        <p class="service-description">
+          We ensure your software is bug-free, secure, and performs flawlessly through rigorous testing.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3 class="service-title">UI/UX Design</h3>
+        <p class="service-description">
+          We design intuitive and user-friendly interfaces that create delightful user experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2 class="section-heading" style="color: green;">Contact Me</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
+ <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+      <h3>Contact Information</h3>
+      <p class="footer-description">
+        <strong>Feel free to reach out via phone or email for any inquiries.</strong>
+      </p>
+      <div class="footer-buttons">
+        <a href="tel:+918904707941" class="footer-btn call-btn">Call</a>
+        <a href="mailto:santoshtotad@gmail.com" class="footer-btn email-btn">Email</a>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; 2024 Santosh Totad. All Rights Reserved.</p>
+  </footer>
+  
+  
+  
+  
+  
+  
+  
+
+    <script>
+        // Theme toggle functionality
+        const themeSwitcher = document.getElementById("theme-switcher");
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            themeSwitcher.checked = true;
+        } else {
+            document.body.classList.add("light-mode");
+        }
+
+        themeSwitcher.addEventListener("change", function () {
+            if (themeSwitcher.checked) {
+                document.body.classList.remove("light-mode");
+                document.body.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.body.classList.remove("dark-mode");
+                document.body.classList.add("light-mode");
+                localStorage.setItem("theme", "light");
+            }
+        });
+
+        // Toggle the additional content visibility when "Read More" is clicked
+        document.getElementById('read-more-btn').addEventListener('click', function() {
+            var additionalContent = document.getElementById('additional-content');
+            additionalContent.style.display = (additionalContent.style.display === 'none' || additionalContent.style.display === '') ? 'block' : 'none';
+        });
+
+        // Circle progress bar animation
+        document.querySelectorAll('.circle').forEach(circle => {
+            let progress = circle.getAttribute('data-progress');
+            circle.style.background = `conic-gradient(#00ffee ${progress}%, #ddd ${progress}%)`;
+        });
+    </script>
+</body>
+
+</html>

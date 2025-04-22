@@ -1,0 +1,1496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12%;
+    background:purple;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo span {
+    text-shadow: 0 0 25px var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+/* Section Styles */
+section {
+    min-height: 100vh;
+    padding: 10rem 12%;
+    position: relative;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    position: relative;
+    margin-top: 8rem; /* Added margin to push down content below header */
+}
+
+/* Home Content */
+.home-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    max-width: 50%;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+
+.home-content h3 {
+    margin: 1rem 0 2rem;
+    font-size: 3.5rem;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 1000px;
+}
+
+/* Image Styling and Position */
+.home-img {
+    position: absolute;
+    top: 7rem;    /* Adjust distance from top */
+    right: 5rem;  /* Adjust distance from right */
+    animation: fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;   /* Start with the image invisible */
+    margin-top: 60px;
+}
+
+
+
+.home-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 100%; /* Keeps image circular */
+    background-color: transparent; /* Ensure no background color extends */
+    box-shadow: 0px 0px 25px; /* Soft shadow without background color extending */
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 50px var(--main-color);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up effect */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-group a:nth-of-type(2) {
+    background-color: black;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover {
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+}
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+    white-space: nowrap; /* Ensures the text doesn't wrap to the next line */
+    overflow: hidden; /* Hides overflowed content during animation */
+}
+
+.text-animation span {
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid var(--main-color);
+  }
+  50% {
+    border-left: 2px solid transparent;
+  }
+  100% {
+    border-left: 2px solid var(--main-color);
+  }
+}
+
+@keyframes words {
+  0%, 20% {
+    content: "Frontend Designer";
+  }
+  21%, 40% {
+    content: "Web Designer";
+  }
+  41%, 60% {
+    content: "UI / UX Designer";
+  }
+  61%, 80% {
+    content: "Web Developer";
+  }
+  81%, 100% {
+    content: "Software Tester";
+  }
+}
+
+@keyframes typing {
+  0%, 10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--main-color); /* Text color */
+  }
+  
+  .logo img {
+    width: 135px;  /* Increase the size of the logo */
+    height: 100px; /* Maintain aspect ratio */
+    margin-right: 15px;  /* Adjust spacing between logo and text */
+  }
+  
+  .logo span {
+    font-size: 36px; /* Make the text size slightly bigger than before */
+    font-weight: 700; /* Make the text more bold */
+    letter-spacing: 1px; /* Add some space between the letters for better readability */
+    color: var(--main-color); /* Adjust text color */
+  }
+  
+  .logo:hover {
+    color: var(--highlight-color);  /* Optional: Add a hover effect for better interactivity */
+  }
+  
+  /* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#theme-switcher {
+    display: none;
+}
+
+.toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px; /* Adjusted width for larger icons */
+    height: 30px; /* Adjusted height */
+    background: var(--main-color);
+    border-radius: 25px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.toggle-label i {
+    font-size: 24px; /* Increase font size for the icons */
+    color: #fff;
+}
+
+/* Day/Night Mode Switch */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+body.light-mode .navbar a {
+    color: #333;
+}
+
+body.light-mode .toggle-label {
+    background: #f0f0f0;
+}
+
+body.light-mode .toggle-label i {
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #080808;
+    color: #fff;
+}
+
+body.dark-mode .navbar a {
+    color: #fff;
+}
+
+body.dark-mode .toggle-label {
+    background: #222222;
+}
+
+body.dark-mode .toggle-label i {
+    color: #fff;
+}
+
+/* Example of smooth hover effects */
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+/* Navigation Links */
+.navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;  /* Default weight */
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+/* Bold Navigation Links for Light or Dark Mode */
+body.light-mode .navbar a {
+    font-weight: 700;  /* Bold in Light Mode */
+}
+
+body.dark-mode .navbar a {
+    font-weight: 700;  /* Bold in Dark Mode */
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+/* About Section Styling */
+.about-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa; /* Light mode background */
+    color: #333; /* Default text color */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styling */
+body.dark-mode .about-section {
+    background-color: #1a1a1a; /* Dark mode background */
+    color: #e0e0e0; /* Light text for dark background */
+}
+/* About Section Content */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem; /* Adjust the space between the image and text */
+}
+
+/* About Image Styling */
+.about-img img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #00ffee;
+  transition: border-color 0.3s;
+}
+
+
+body.dark-mode .about-img img {
+    border-color: white; /* Darker border in dark mode */
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+body.dark-mode .about-text h2 {
+    color: #f9f9f9; /* Lighter color for headings in dark mode */
+}
+
+.about-text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #555;
+}
+/* About Section Offset */
+.about-section {
+    padding-top: 80px; /* Adjust to match the height of your header */
+    scroll-margin-top: 80px; /* Creates the offset when navigating */
+}
+
+
+body.dark-mode .about-text p {
+    color: #cfcfcf; /* Softer color in dark mode */
+}
+
+.read-more-btn {
+    background-color: #00ffee;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 30px;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #00b3cc;
+}
+
+body.dark-mode .read-more-btn {
+    background-color: #00b3cc;
+    color: #f9f9f9;
+}
+
+body.dark-mode .read-more-btn:hover {
+    background-color: #007a99;
+}
+
+.additional-content {
+    display: none;
+    font-size: 1.1rem;
+    color: inherit;
+    margin-top: 1rem;
+    line-height: 1.8;
+    transition: color 0.3s;
+}
+
+body.dark-mode .additional-content {
+    color: #cfcfcf;
+}
+/* Skills Section Styling */
+.skills-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--section-bg);
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 20rem;
+
+}
+
+
+
+.skill {
+    text-align: center;
+    width: 130px;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    animation: hover-animation 0.3s ease; /* Default state with hover effect */
+    animation: fade-in 0.3s ease; /* Default state with fade-in effect */
+    animation: hover-animation 0.3s ease; /* Default state with hover effect */
+    animation: fade-in 0.3s ease forwards;
+    animation: hover-animation 0.3s ease; /* Default state with hover effect */
+    height: 100px;
+}
+
+.skill h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Circular Progress Indicator Styling */
+.circle {
+    width: 130px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--circle-border);
+    position: relative;
+    background-color: var(--circle-bg);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    animation: zoom-out 0.3s ease; /* Default state with zoom-out effect */
+}
+
+.circle::before {
+    content: attr(data-progress) '%';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    transition: color 0.3s ease;
+}
+
+/* Hover and Click Animation */
+.circle:hover {
+    animation: zoom-in 0.3s ease forwards;
+}
+
+.circle:active {
+    animation: zoom-out 0.3s ease forwards;
+}
+
+@keyframes zoom-in {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: scale(1.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Progress Indicator Backgrounds */
+.circle[data-progress="90"] {
+    background: conic-gradient(var(--highlight-color) 0% 90%, var(--circle-bg) 90% 100%);
+}
+
+.circle[data-progress="80"] {
+    background: conic-gradient(var(--highlight-color) 0% 80%, var(--circle-bg) 80% 100%);
+}
+
+.circle[data-progress="70"] {
+    background: conic-gradient(var(--highlight-color) 0% 70%, var(--circle-bg) 70% 100%);
+}
+
+.circle[data-progress="85"] {
+    background: conic-gradient(var(--highlight-color) 0% 85%, var(--circle-bg) 85% 100%);
+}
+
+.circle[data-progress="75"] {
+    background: conic-gradient(var(--highlight-color) 0% 75%, var(--circle-bg) 75% 100%);
+}
+
+/* Color Variables for Light and Dark Modes */
+:root {
+    --section-bg: #f8f9fa;
+    --primary-text: #333;
+    --highlight-color: #00ffee;
+    --circle-bg: #e0e0e0;
+}
+
+body.dark-mode {
+    --section-bg: #121212;
+    --primary-text: #f1f1f1;
+    --highlight-color: #00b3cc;
+    --circle-bg: #333;
+}
+/* Certifications Section Styling */
+.certifications-section {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--section-bg);
+}
+
+.certifications-section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.certifications-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 20rem;
+}
+
+.certification-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: scale(1.05);
+}
+
+.certification-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.certification-card p {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin-bottom: 1rem;
+}
+
+.certificate-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #00b3cc;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.certificate-btn:hover {
+    background-color: #007a99;
+}
+
+/* Color Variables for Light and Dark Modes */
+:root {
+    --section-bg: #f8f9fa;
+    --primary-text: #333;
+    --secondary-text: #555;
+    --card-bg: #fff;
+}
+
+body.dark-mode {
+    --section-bg: #121212;
+    --primary-text: #f1f1f1;
+    --secondary-text: #cccccc;
+    --card-bg: #333;
+}
+/* Projects Section Styles */
+.project-section {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .project-container {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .project-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .project-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .project-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .project-card {
+      width: 100%;
+    }
+  }
+  /* Stop Scrolling at Project Headline */
+.project-section {
+    scroll-margin-top: 150px; /* Adjust based on your header's height */
+  }
+/* Enable Smooth Scrolling */
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Offset the section scroll for fixed header */
+  section {
+    scroll-margin-top: 80px; /* Adjust this value based on your fixed header height */
+  }
+.skills-section{
+    scroll-margin-top: 150px;
+
+}  
+.certifications-section{
+    scroll-margin-top: 150px;
+}
+  /* Services Section Styles */
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Container for Service Cards */
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  /* Service Card Styles */
+  .service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .service-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .service-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .services-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .services-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .services-section{
+    scroll-margin-top: 150px;
+  }
+  .about-section{
+    scroll-margin-top: 150px;
+  }
+  /* Contact Form Styling */
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .contact-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  
+  label {
+    font-size: 1.3rem; /* Larger label text */
+    color: #34495e;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Larger input text */
+    color: #333;
+    margin-top: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Input and Textarea Focus */
+  input:focus,
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn:active {
+    background-color: #003f7f;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-form {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-section {
+      padding: 40px 10px;
+    }
+    .section-heading {
+      font-size: 2rem; /* Adjust heading size on smaller screens */
+    }
+    .contact-form {
+      padding: 20px;
+    }
+  }
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .footer-content p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  /* Make Contact Sentence Bold and Attractive */
+  .footer-content p strong {
+    color: #f1c40f; /* Highlight color */
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  /* Footer Buttons */
+  .footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+  }
+  
+  .footer-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Call Button Styles */
+  .call-btn {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .call-btn:hover {
+    background-color: #fff;
+    color: #28a745;
+    border-color: #28a745;
+  }
+  
+  /* Email Button Styles */
+  .email-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .email-btn:hover {
+    background-color: #fff;
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  /* Footer Copyright */
+  .footer-copy {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 30px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 576px) {
+    .footer-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-btn {
+      width: 100%;
+    }
+  }
+/* Interactive Card Styles */
+.project-card, .service-card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-card::before, .service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .project-card:hover::before, .service-card:hover::before {
+    opacity: 0.15;
+  }
+  
+  .project-card h3, .service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.4s ease;
+  }
+  
+  .project-card p, .service-card p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .project-card a, .service-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .project-card a:hover, .service-card a:hover {
+    color: #0056b3;
+  }
+  
+  .project-card:hover, .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card:hover h3, .service-card:hover h3 {
+    color: #007bff;
+  }
+  /* Base styles for larger screens, such as desktops/laptops */
+@media (min-width: 1024px) {
+  /* Adjust font size, padding, and spacing for larger screens */
+  .header {
+      padding: 2rem 10%;
+  }
+
+  .navbar a {
+      font-size: 2rem;
+      margin-left: 3rem;
+  }
+
+  .home-content h1 {
+      font-size: 6rem;
+  }
+
+  .home-content h3 {
+      font-size: 3rem;
+  }
+
+  .home-content p {
+      font-size: 1.4rem;
+  }
+
+  /* Adjust image position and size */
+  .home-img img {
+      max-width: 400px;
+  }
+
+  /* Adjust button padding */
+  .btn {
+      padding: 1rem 3rem;
+  }
+
+  /* Adjust logo font size */
+  .logo {
+      font-size: 3rem;
+  }
+}
+
+/* Smaller screens, such as tablets */
+@media (max-width: 1024px) {
+  .header {
+      padding: 2rem 5%;
+  }
+
+  .navbar a {
+      font-size: 1.6rem;
+      margin-left: 2rem;
+  }
+
+  .home-content h1 {
+      font-size: 5rem;
+  }
+
+  .home-content h3 {
+      font-size: 2.5rem;
+  }
+
+  .home-content p {
+      font-size: 1.3rem;
+  }
+
+  .home-img img {
+      max-width: 280px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .header {
+      padding: 2rem 3%;
+  }
+
+  .navbar {
+      display: none; /* Hide the navbar for mobile and use a toggle menu icon */
+  }
+
+  #menu-icon {
+      display: block;
+      cursor: pointer;
+  }
+
+  /* Stack home content and image vertically */
+  .home {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .home-content {
+      max-width: 90%;
+      text-align: center;
+  }
+
+  .home-content h1 {
+      font-size: 4rem;
+  }
+
+  .home-content h3 {
+      font-size: 2rem;
+  }
+
+  .home-content p {
+      font-size: 1.2rem;
+  }
+
+  .home-img {
+      position: static;
+      margin-top: 2rem;
+  }
+
+  .home-img img {
+      max-width: 200px;
+  }
+}
+/* Styles for iPad Mini in portrait mode */
+@media (max-width: 768px) and (min-width: 600px) {
+  /* Adjust header padding for the smaller tablet screen */
+  .header {
+      padding: 2rem 5%;
+  }
+
+  /* Slightly smaller font sizes for better readability */
+  .navbar a {
+      font-size: 1.6rem;
+      margin-left: 2rem;
+  }
+
+  .home-content h1 {
+      font-size: 4.5rem;
+  }
+
+  .home-content h3 {
+      font-size: 2.3rem;
+  }
+
+  .home-content p {
+      font-size: 1.2rem;
+  }
+
+  /* Adjust image size */
+  .home-img img {
+      max-width: 250px;
+  }
+
+  /* Button adjustments for spacing */
+  .btn {
+      padding: 1rem 2.5rem;
+  }
+
+  /* Logo font-size adjustments */
+  .logo {
+      font-size: 2.5rem;
+  }
+
+  /* Center align content */
+  .home {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .home-content {
+      max-width: 90%;
+      text-align: center;
+  }
+
+  /* Social icons and other elements adjustments */
+  .social-icons a {
+      width: 4rem;
+      height: 4rem;
+      font-size: 2rem;
+  }
+}
+/* Styles for Samsung Galaxy S8+ and similar mobile screens */
+@media (max-width: 360px) {
+  /* Adjust header padding and width for smaller screens */
+  .header {
+      padding: 1rem 4%;
+  }
+
+  /* Smaller font sizes and adjusted margin for navigation links */
+  .navbar a {
+      font-size: 1.3rem;
+      margin-left: 1rem;
+  }
+
+  .home-content h1 {
+      font-size: 3rem;
+  }
+
+  .home-content h3 {
+      font-size: 1.6rem;
+  }
+
+  .home-content p {
+      font-size: 1rem;
+  }
+
+  /* Resize image for a more comfortable fit */
+  .home-img img {
+      max-width: 160px;
+  }
+
+  /* Adjust button padding and font size */
+  .btn {
+      padding: 0.7rem 1.8rem;
+      font-size: 1.3rem;
+  }
+
+  /* Reduce logo font size and adjust layout */
+  .logo {
+      font-size: 2.2rem;
+  }
+
+  /* Stack and center-align home content with narrower width */
+  .home {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 2%; /* Additional padding to avoid side overflow */
+  }
+
+  .home-content {
+      max-width: 95%;
+      text-align: center;
+  }
+
+  /* Adjust social icon sizes */
+  .social-icons a {
+      width: 3.2rem;
+      height: 3.2rem;
+      font-size: 1.8rem;
+  }
+}
+/* Responsive Skills Section for Samsung Galaxy S8+ */
+@media (max-width: 360px) {
+  .skills-section {
+      padding: 2rem 0;
+      margin-top: -8px;
+  }
+
+  .skills-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .skills-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-top: 4rem; /* Adjusted to avoid large spacing on smaller screens */
+  }
+
+  .skill {
+      width: 100px; /* Reduced width for smaller screens */
+      height: auto;
+  }
+
+  .skill h3 {
+      font-size: 1rem;
+      margin-top: 0.8rem;
+  }
+
+  /* Circular Progress Indicator Styling for Smaller Screens */
+  .circle {
+      width: 100px; /* Reduced width */
+      height: 100px; /* Reduced height */
+      border-width: 4px; /* Reduced border size */
+  }
+
+  .circle::before {
+      font-size: 1rem;
+  }
+}
+/* Responsive About Section for Samsung Galaxy S8+ */
+@media (max-width: 360px) {
+  /* Adjust About Section Padding and Offset */
+  .about-section {
+      padding-top: 20px; /* Reduced padding for a better fit */
+      scroll-margin-top: 20px; /* Reduced scroll margin for a better offset */
+      margin-top: -155px; /* Move the About section closer to the top */
+  }
+
+  /* Ensure the About Section content is stacked vertically */
+  .about-section .about-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem; /* Added some padding for better spacing */
+  }
+
+  /* Adjust Text Color for Dark Mode */
+  body.dark-mode .about-text p {
+      color: #e0e0e0; /* Softer color for better readability */
+      font-size: 1rem; /* Smaller font size for better readability */
+  }
+
+  /* Image Adjustments */
+  .about-img img {
+      width: 100%; /* Make the image responsive */
+      max-width: 250px; /* Limit the width for a better fit */
+      height: auto; /* Ensure the height adjusts automatically */
+      margin-bottom: 1rem; /* Add some space below the image */
+  }
+
+  /* Read More Button Adjustments */
+  .read-more-btn {
+      padding: 0.6rem 1.6rem; /* Smaller padding for button */
+      font-size: 1rem; /* Adjusted font size */
+      border-radius: 25px; /* Smaller border-radius */
+      margin-top: 1rem; /* Add space above the button */
+  }
+
+  /* Hover Effects for the Button */
+  .read-more-btn:hover {
+      background-color: #00b3cc;
+  }
+
+  body.dark-mode .read-more-btn {
+      background-color: #00b3cc;
+      color: #f9f9f9;
+  }
+
+  body.dark-mode .read-more-btn:hover {
+      background-color: #007a99;
+  }
+
+  /* Additional Content Styling */
+  .additional-content {
+      font-size: 1rem; /* Slightly smaller font size */
+      margin-top: 1rem;
+      line-height: 1.6; /* Reduced line-height for smaller screens */
+      text-align: center; /* Center text for smaller screens */
+  }
+
+  /* Dark Mode Adjustments */
+  body.dark-mode .additional-content {
+      color: #e0e0e0;
+  }
+}
+
+
+ 
+
+
+
+     
+
